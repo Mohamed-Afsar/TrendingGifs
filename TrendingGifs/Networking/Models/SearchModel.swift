@@ -7,10 +7,10 @@
 
 import Foundation
 
-struct SearchModel: Decodable, CustomStringConvertible {
-    let data: [GifModel]
+public struct SearchModel: Decodable, CustomStringConvertible {
+    public let data: [GifModel]
     
-    var description: String {
+    public var description: String {
         """
         data: \(data)
         """

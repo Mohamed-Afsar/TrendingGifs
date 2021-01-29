@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct GifImagesModel: Decodable, Hashable, Equatable {
+public struct GifImagesModel: Decodable, Hashable, Equatable {
     let fixed_height: FixedHeight
     let fixed_width: FixedWidth
     
-    var preferredMeta: GifImageMeta {
+    public var preferredMeta: GifImageMeta {
         guard let width = Int32(self.fixed_height.width), let height = Int32(self.fixed_height.height) else {
             return self.fixed_width
         }
@@ -22,7 +22,7 @@ struct GifImagesModel: Decodable, Hashable, Equatable {
 }
 
 extension GifImagesModel: CustomStringConvertible {
-    var description: String {
+    public var description: String {
         """
         fixed_height: \(fixed_height)
         fixed_width: \(fixed_width)
@@ -31,7 +31,7 @@ extension GifImagesModel: CustomStringConvertible {
 }
 
 // MARK: Internal types
-protocol GifImageMeta {
+public protocol GifImageMeta {
     var url: String { get }
     var width: String { get }
     var height: String { get }

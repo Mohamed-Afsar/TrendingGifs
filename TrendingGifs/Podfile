@@ -5,14 +5,32 @@ use_frameworks!
 workspace 'TrendingGifs'
 
 target 'Application' do
-  project 'Application/Application'
+  project 'Application/Application.project'
   # Pods for Application
+  pod 'RxSwift'
+
+end
+
+target 'UserInterface' do
+  project 'UserInterface/UserInterface.project'
+  # Pods for UserInterface
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'Giphy', :podspec => 'https://s3.amazonaws.com/sdk.mobile.giphy.com/SDK/2.0.9/Giphy.podspec'
 
 end
 
 target 'Networking' do
-  project 'Networking/Networking'
+  project 'Networking/Networking.project'
   # Pods for Networking
   pod 'RxSwift'
+
+end
+
+target 'Utils' do
+  project 'Utils/Utils.project'
+  # Pods for Networking
+  pod 'RxSwift'
+  pod 'RxCocoa'
 
 end

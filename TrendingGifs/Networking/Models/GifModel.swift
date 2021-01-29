@@ -8,12 +8,12 @@
 import Foundation
 
 // Hashable, Equatable - Adding capability to add this type in a 'Set'
-struct GifModel: Decodable, CustomStringConvertible, Hashable, Equatable {
-    let id: String
-    let title: String
-    let images: GifImagesModel
+public struct GifModel: Decodable, CustomStringConvertible, Hashable, Equatable {
+    public let id: String
+    public let title: String
+    public let images: GifImagesModel
     
-    var description: String {
+    public var description: String {
         """
         id: \(id)
         title: \(title)

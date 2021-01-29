@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct TrendingModel: Decodable, CustomStringConvertible {
-    let data: [GifModel]
-    let pagination: PaginationModel
+public struct TrendingModel: Decodable, CustomStringConvertible {
+    public let data: [GifModel]
+    public let pagination: PaginationModel
     
-    var description: String {
+    public var description: String {
         """
         data: \(data)
         pagination: \(pagination)
